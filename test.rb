@@ -100,8 +100,8 @@ class TestDijkstra < Test::Unit::TestCase
     graph.add_edge(strasbourg, montpellier, 797)
     graph.add_edge(strasbourg, marseille, 809)
 
-    result = graph.shortest_path(bordeaux, strasbourg)
-    assert_equal [ bordeaux, poitiers, paris, arras, strasbourg ], result.nodes
-    assert_equal 1282, result.distance
+    path = graph.shortest_path(bordeaux, strasbourg)
+    assert_equal [ bordeaux, poitiers, paris, arras, strasbourg ], path.nodes
+    assert_equal 1282, path.distance
   end
 end
